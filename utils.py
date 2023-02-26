@@ -63,7 +63,7 @@ def draw_orig_and_post_pred_sample(orig, reconst, n):
     plt.show()
 
 
-def plot_samples(samples, n):    
+def plot_samples(samples, n, text):
     fig, axs = plt.subplots(n, 1, figsize=(6,8))
     i = 0
     for _ in range(n):
@@ -72,7 +72,7 @@ def plot_samples(samples, n):
         axs[i].plot(s)    
         i += 1
 
-    fig.suptitle("Generated Samples (Scaled)", fontsize = TITLE_FONT_SIZE)
+    fig.suptitle(f"{text} Samples (Scaled)", fontsize = TITLE_FONT_SIZE)
     fig.tight_layout()
     plt.show()
 
